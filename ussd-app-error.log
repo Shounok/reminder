@@ -1,0 +1,101 @@
+[15-Jan-2019 08:03:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:04:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:04:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:04:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:08:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:08:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:09:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:09:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:09:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:14:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\reminder\reminder.php on line 19
+[15-Jan-2019 08:24:27 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:45
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 45
+[15-Jan-2019 08:25:36 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:45
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 45
+[15-Jan-2019 09:55:57 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:46
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 46
+[15-Jan-2019 10:10:36 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:46
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 46
+[15-Jan-2019 10:11:40 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:46
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 46
+[15-Jan-2019 10:11:43 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:46
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 46
+[15-Jan-2019 10:16:40 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:46
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 46
+[15-Jan-2019 10:16:45 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:46
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 46
+[15-Jan-2019 10:30:29 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:47
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 47
+[15-Jan-2019 11:21:47 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:47
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 47
+[15-Jan-2019 11:21:59 Europe/Berlin] PHP Notice:  Undefined variable: receiverSessionId in C:\xampp\htdocs\reminder\reminder.php on line 18
+[15-Jan-2019 11:21:59 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:47
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 47
+[15-Jan-2019 11:22:17 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:47
+Stack trace:
+#0 C:\xampp\htdocs\reminder\reminder.php(19): MoUssdReceiver->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 47
