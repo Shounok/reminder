@@ -42,7 +42,27 @@ $responseMsg = array(
     "otherdays" => "Choose the date for
 	1. First Date
 	2. Proposal Date
-	999.Back",
+    999.Back",
+    "birthday_friend" => "Enter your friend's birthday in dd/mm/yyyy format
+    999. Back",
+    "birthday_wife" =>  "Enter your wife's birthday in dd/mm/yyyy format
+    999. Back",
+    "birthday_family" =>  "Enter your family's birthday in dd/mm/yyyy format
+    999. Back",
+    "birthday_others" =>  "Enter other's birthday in dd/mm/yyyy format
+    999. Back",
+    "anniversary_friendship" => "Enter friendship anniversary in dd/mm/yyyy format
+    999. Back",
+    "anniversary_marriage" => "Enter marriage anniversary in dd/mm/yyyy format
+    999. Back",
+    "anniversary_death" => "Enter death anniversary in dd/mm/yyyy format
+    999. Back",
+    "anniversary_others" => "Enter other anniversary date in dd/mm/yyyy format
+    999. Back",
+    "otherdays_firstdate" => "Enter the date of first date in dd/mm/yyyy format
+    999. Back",
+    "otherdays_proposaldate" => "Enter your propsal date in dd/mm/yyyy format
+    999. Back"
    );
 logFile("Previous Menu is := " . $_SESSION["menu-Opt"]); //Get previous menu number
 if (($receiver->getUssdOperation()) == "mo-init") { //Send the main menu
@@ -180,7 +200,7 @@ function loadUssdSender($sessionId, $responseMessage,$address)
     $version = "1.0";
     try {
         // Create the sender object server url
-        $sender = new MtUssdSender("https://localhost:10001/reminder/reminder.php"); // Application ussd-mt sending https url
+        $sender = new MtUssdSender("http://localhost:7000/ussd/send"); // Application ussd-mt sending https url
         $response = $sender->ussd($applicationId, $password, $version, $responseMessage,
             $sessionId, $ussdOperation, $destinationAddress, $encoding, $chargingAmount);
         return $response;

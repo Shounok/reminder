@@ -1,66 +1,41 @@
-[18-Jan-2019 20:27:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:18
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\reminder\reminder.php on line 18
-[18-Jan-2019 20:27:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:18
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\reminder\reminder.php on line 18
-[18-Jan-2019 20:27:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:18
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\reminder\reminder.php on line 18
-[18-Jan-2019 20:27:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:18
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\reminder\reminder.php on line 18
-[18-Jan-2019 20:27:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:18
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\reminder\reminder.php on line 18
-[18-Jan-2019 20:28:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'MoUssdReceiver' not found in C:\xampp\htdocs\reminder\reminder.php:18
-Stack trace:
-#0 {main}
-  thrown in C:\xampp\htdocs\reminder\reminder.php on line 18
-[18-Jan-2019 20:28:54 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:48
-Stack trace:
-#0 C:\xampp\htdocs\reminder\reminder.php(18): MoUssdReceiver->__construct()
-#1 {main}
-  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 48
-[19-Jan-2019 06:45:44 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:48
-Stack trace:
-#0 C:\xampp\htdocs\reminder\reminder.php(18): MoUssdReceiver->__construct()
-#1 {main}
-  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 48
-[19-Jan-2019 09:42:52 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:48
-Stack trace:
-#0 C:\xampp\htdocs\reminder\reminder.php(8): MoUssdReceiver->__construct()
-#1 {main}
-  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 48
-[19-Jan-2019 20:15:43 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 45
-[19-Jan-2019 20:34:27 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 46
-[19-Jan-2019 20:57:15 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[19-Jan-2019 21:35:02 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[19-Jan-2019 21:36:59 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[19-Jan-2019 21:39:20 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[19-Jan-2019 21:39:43 Europe/Berlin] PHP Notice:  Undefined index: birthday_friend in C:\xampp\htdocs\reminder\reminder.php on line 160
-[19-Jan-2019 21:39:43 Europe/Berlin] PHP Notice:  Undefined index: birthday_friend in C:\xampp\htdocs\reminder\reminder.php on line 161
-[19-Jan-2019 21:39:43 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[20-Jan-2019 07:51:59 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 47
-[20-Jan-2019 07:51:59 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[20-Jan-2019 07:53:21 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
-[09-Feb-2019 17:57:34 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:48
-Stack trace:
-#0 C:\xampp\htdocs\reminder\reminder.php(8): MoUssdReceiver->__construct()
-#1 {main}
-  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 48
-[09-Feb-2019 23:23:52 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:48
-Stack trace:
-#0 C:\xampp\htdocs\reminder\reminder.php(8): MoUssdReceiver->__construct()
-#1 {main}
-  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 48
-[09-Feb-2019 23:24:33 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Some of the required parameters are not provided in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php:48
-Stack trace:
-#0 C:\xampp\htdocs\reminder\reminder.php(8): MoUssdReceiver->__construct()
-#1 {main}
-  thrown in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 48
+[18-Feb-2019 20:30:35 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 190
+[18-Feb-2019 20:30:35 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 191
+[18-Feb-2019 20:32:32 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 189
+[18-Feb-2019 20:32:32 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 190
+[18-Feb-2019 20:33:11 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 189
+[18-Feb-2019 20:33:11 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 190
+[18-Feb-2019 20:33:30 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 185
+[18-Feb-2019 20:33:30 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 186
+[18-Feb-2019 20:34:35 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 185
+[18-Feb-2019 20:34:35 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 186
+[18-Feb-2019 20:35:16 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 185
+[18-Feb-2019 20:35:16 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 186
+[18-Feb-2019 20:36:07 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 185
+[18-Feb-2019 20:36:07 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 186
+[18-Feb-2019 20:40:28 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 185
+[18-Feb-2019 20:40:28 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 186
+[18-Feb-2019 20:40:47 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 185
+[18-Feb-2019 20:40:47 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 186
+[18-Feb-2019 20:44:29 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:44:29 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:45:55 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:45:55 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:48:43 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:48:43 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:49:06 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 67
+[18-Feb-2019 20:49:46 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:49:46 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:51:27 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:51:27 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:51:39 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:51:39 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:52:07 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:52:07 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:52:27 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:52:27 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:52:53 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:52:53 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[18-Feb-2019 20:53:00 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 180
+[18-Feb-2019 20:53:00 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 181
+[19-Feb-2019 14:02:17 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
+[19-Feb-2019 14:02:59 Europe/Berlin] USSD ERROR: 500 | Server URL is invalid
