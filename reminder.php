@@ -5,11 +5,12 @@ include_once 'lib/ussd/MtUssdSender.php';
 include_once 'log.php';
 ini_set('error_log', 'ussd-app-error.txt');
 @ob_start();
+
+        
 $receiver = new MoUssdReceiver(); // Create the Receiver object
 $receiverSessionId = $receiver->getSessionId();
 session_id($receiverSessionId); //Use received session id to create a unique session
 session_start();
-
 $content = $receiver->getMessage(); // get the message content
 $address = $receiver->getAddress(); // get the sender's address
 $requestId = $receiver->getRequestID(); // get the request ID
@@ -43,25 +44,25 @@ $responseMsg = array(
 	1. First Date
 	2. Proposal Date
     999.Back",
-    "birthday_friend" => "Enter your friend's birthday in dd/mm/yyyy format
+    "birthday_friend" => "Enter your friend's birthday in ddmmyyyy format
     999. Back",
-    "birthday_wife" =>  "Enter your wife's birthday in dd/mm/yyyy format
+    "birthday_wife" =>  "Enter your wife's birthday in ddmmyyyy format
     999. Back",
-    "birthday_family" =>  "Enter your family's birthday in dd/mm/yyyy format
+    "birthday_family" =>  "Enter your family's birthday in ddmmyyyy format
     999. Back",
-    "birthday_others" =>  "Enter other's birthday in dd/mm/yyyy format
+    "birthday_others" =>  "Enter other's birthday in ddmmyyyy format
     999. Back",
-    "anniversary_friendship" => "Enter friendship anniversary in dd/mm/yyyy format
+    "anniversary_friendship" => "Enter friendship anniversary in ddmmyyyy format
     999. Back",
-    "anniversary_marriage" => "Enter marriage anniversary in dd/mm/yyyy format
+    "anniversary_marriage" => "Enter marriage anniversary in ddmmyyyy format
     999. Back",
-    "anniversary_death" => "Enter death anniversary in dd/mm/yyyy format
+    "anniversary_death" => "Enter death anniversary in ddmmyyyy format
     999. Back",
-    "anniversary_others" => "Enter other anniversary date in dd/mm/yyyy format
+    "anniversary_others" => "Enter other anniversary date in ddmmyyyy format
     999. Back",
-    "otherdays_firstdate" => "Enter the date of first date in dd/mm/yyyy format
+    "otherdays_firstdate" => "Enter the date of first date in ddmmyyyy format
     999. Back",
-    "otherdays_proposaldate" => "Enter your propsal date in dd/mm/yyyy format
+    "otherdays_proposaldate" => "Enter your propsal date in ddmmyyyy format
     999. Back"
    );
 logFile("Previous Menu is := " . $_SESSION["menu-Opt"]); //Get previous menu number
@@ -73,7 +74,7 @@ if (($receiver->getUssdOperation()) == "mo-init") { //Send the main menu
 }
 if (($receiver->getUssdOperation()) == "mo-cont") {
     $menuName = null;
-    switch ($_SESSION['menu-Opt']) {
+    switch($_SESSION['menu-Opt']) {
         case "main":
             switch ($content) {
                 case "1":
@@ -92,7 +93,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
             $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
             break;
         case "birthday":
-            $_SESSION['menu-Opt'] = "birthday_list"; //Set to ngo menu back
+            $_SESSION['menu-Opt'] = "birthday_list"; //Set to  menu back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "birthday_friend";
@@ -116,7 +117,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
             }
             break;
         case "anniversary":
-            $_SESSION['menu-Opt'] = "anniversary_list"; //Set to product menu back
+            $_SESSION['menu-Opt'] = "anniversary_list"; //Set to  menu back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "anniversary_friendship";
@@ -140,7 +141,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
             }
             break;
         case "otherdays":
-            $_SESSION['menu-Opt'] = "otherdays_list"; //Set to career menu back
+            $_SESSION['menu-Opt'] = "otherdays_list"; //Set to  menu back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "otherdays_firstdate";
@@ -172,6 +173,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
             $_SESSION['menu-Opt'] = $menuName; //Assign previous session menu name
             break;
     }
+    //var_dump($receiver->getMessage());
     if ($receiver->getMessage() == "000") {
         $responseExitMsg = "Exit Program!";
         $response = loadUssdSender($sessionId, $responseExitMsg,$address);
@@ -210,29 +212,56 @@ function loadUssdSender($sessionId, $responseMessage,$address)
         return null;
     }
 }
+
+function takeReminderDate($date){
+    $dateArray = trim($date);
+    if(strlen($dateArray)==8)
+    {
+        $dateArray = str_split($dateArray,4);
+        $dayMonthArray = str_split($dateArray[0],2);
+
+        $year = $dateArray[1];
+        $day = $dayMonthArray[0];
+        $month = $dayMonthArray[1];
+    }
+}
+
+function getBillingStartDate()
+{
+    $currentDate = date('Y-m-d');
+    return $currentDate;
+}
+function getBillingEndDate() 
+{
+    //$currentDate = date('Y-m-d');
+    //return $currentDate;
+}
+function totalSubscribedMonth()
+{
+    
+}
 /*
-function processAddress($address)
+function processResponse($address)
 {
    
     return str_split($address,4)[1];
 }
 */
 function insertRequest()
-{
+{/*
     $dsn = 'mysql:dbname=dbussdreminder; host=127.0.0.1';
     $db_username = 'xossadmin';
     $db_password = 'Asdf1234'; 
-   /* 
+   
     try {
         $stmt = new PDO($dsn, $db_username, $db_password);
-        $sql = "INSERT INTO `tbl_request`(`request_id`, `msisdn`, `session_id`, `service_id`, `request_date`, `target_name`, `target_phoneNumber`, `billing_date_start`, `billing_date_end`, `subscribed_month_total`, `subscription`, `billing_grace`) 
-    VALUES (".$requestId.",".$address.",".$sessionId.",[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12])";
+        $sql = "INSERT INTO `tbl_request`(`request_id`, `msisdn`, `session_id`, `request_date`, `target_name`, `target_phoneNumber`, `billing_date_start`, `billing_date_end`, `subscribed_month_total`, `subscription`, `billing_grace`) 
+    VALUES (".$requestId.",".$address.",".$sessionId.",[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])";
         $insertData = $stmt->query($sql);
     } catch (PDOException $e) {
         echo "Connection Failed". $e->getMessage();
     }
-    */
 
-}
+*/ }
 
 ?>

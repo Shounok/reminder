@@ -32,7 +32,7 @@ class MoUssdReceiver{
 
     public function __construct(){
         $array = json_decode(file_get_contents('php://input'), true);
-        $this->thejson = json_decode(file_get_contents('php://input'), true);
+        //$this->thejson = json_decode(file_get_contents('php://input'), true);
         $this->sourceAddress = $array['sourceAddress'];
         $this->message = $array['message'];
         $this->requestId = $array['requestId'];
@@ -43,9 +43,11 @@ class MoUssdReceiver{
         $this->ussdOperation = $array['ussdOperation'];
         $this->vlrAddress = $array['vlrAddress'];
 
+        var_dump(isset($this->message));
         if (!((isset($this->sourceAddress) && isset($this->message)))) {
-            
             throw new Exception("Some of the required parameters are not provided");
+         
+          
         } else {
             // Success received response
             $responses = array("statusCode" => "S1000", "statusDetail" => "Success");

@@ -113,3 +113,34 @@ Selected response message := Choose Birthday of
 	3. Family
 	4. Others
 	999. Back
+[ content=*213*99#, address=tel:8801866742387, requestId=1550920796346, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := birthday
+[ content=as, address=tel:8801866742387, requestId=1550920804049, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := birthday
+[ content=as, address=tel:8801866742387, requestId=1550920810986, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := birthday
+Selected response message := Select a Day
+    1. Birth Day
+    2. Anniversary
+    3. Other Days
+	000.Exit
+[ content=2, address=tel:8801866742387, requestId=1550920825266, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := birthday_list
+Selected response message := Choose Birthday of
+	1. Friend
+	2. Wife
+	3. Family
+	4. Others
+	999. Back
+[ content=3, address=tel:8801866742387, requestId=1550920831203, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := birthday
+Selected response message := Enter your family's birthday in dd/mm/yyyy format
+    999. Back
+[ content=2, address=tel:8801866742387, requestId=1550921319910, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := birthday_list
+[ content=000, address=tel:8801866742387, requestId=1550921325988, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := birthday_list
+[ content=*213*99#, address=tel:8801866742387, requestId=1551083920040, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := birthday_list
+[ content=", address=", requestId=", applicationId=", encoding=", version=", sessionId=", ussdOperation=" ]
+Previous Menu is := 
