@@ -1,15 +1,5 @@
 <?php
-/**
- *   (C) Copyright 1997-2013 hSenid International (pvt) Limited.
- *   All Rights Reserved.
- *
- *   These materials are unpublished, proprietary, confidential source code of
- *   hSenid International (pvt) Limited and constitute a TRADE SECRET of hSenid
- *   International (pvt) Limited.
- *
- *   hSenid International (pvt) Limited retains all title to and intellectual
- *   property rights in these materials.
- */
+
 include_once '../../lib/sms/SmsReceiver.php';
 include_once '../../lib/sms/SmsSender.php';
 include_once '../log.php';
@@ -24,9 +14,7 @@ try {
     $version = $receiver->getVersion(); // get the version
     logFile("[ content=$content, address=$address, requestId=$requestId, applicationId=$applicationId, encoding=$encoding, version=$version ]");
     $responseMsg;
-    //your logic goes here......
-    $split = explode(' ', $content);
-    $responseMsg = bmiLogicHere($split);
+    
     // Create the sender object server url
     $sender = new SmsSender("http://localhost:7000/sms/send");
     //sending a one message

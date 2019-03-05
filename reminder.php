@@ -6,18 +6,24 @@ include_once 'log.php';
 ini_set('error_log', 'ussd-app-error.txt');
 @ob_start();
 
-        
+
+
+
 $receiver = new MoUssdReceiver(); // Create the Receiver object
 $receiverSessionId = $receiver->getSessionId();
+$address = $receiver->getAddress(); // get the sender's address
 session_id($receiverSessionId); //Use received session id to create a unique session
 session_start();
 $content = $receiver->getMessage(); // get the message content
-$address = $receiver->getAddress(); // get the sender's address
+
 $requestId = $receiver->getRequestID(); // get the request ID
 $applicationId = $receiver->getApplicationId(); // get application ID
 $encoding = $receiver->getEncoding(); // get the encoding value
 $version = $receiver->getVersion(); // get the version
 $sessionId = $receiver->getSessionId(); // get the session ID;
+
+
+
 $ussdOperation = $receiver->getUssdOperation(); // get the ussd operation
 logFile("[ content=$content, address=$address, requestId=$requestId, applicationId=$applicationId, encoding=$encoding, version=$version, sessionId=$sessionId, ussdOperation=$ussdOperation ]");
 
@@ -93,7 +99,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
             $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
             break;
         case "birthday":
-            $_SESSION['menu-Opt'] = "birthday_list"; //Set to  menu back
+            $_SESSION['menu-Opt'] = "birthday_list"; //Set to  menu 'birthday' back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "birthday_friend";
@@ -115,9 +121,10 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     $menuName = "main";
                     break;
             }
+            $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
             break;
         case "anniversary":
-            $_SESSION['menu-Opt'] = "anniversary_list"; //Set to  menu back
+            $_SESSION['menu-Opt'] = "anniversary_list"; //Set to menu 'anniversary' back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "anniversary_friendship";
@@ -139,9 +146,10 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     $menuName = "main";
                     break;
             }
+            $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
             break;
         case "otherdays":
-            $_SESSION['menu-Opt'] = "otherdays_list"; //Set to  menu back
+            $_SESSION['menu-Opt'] = "otherdays_list"; //Set to  menu 'otherdays' back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "otherdays_firstdate";
@@ -157,6 +165,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     $menuName = "main";
                     break;
             }
+            $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
             break;
         case "birthday_list" || "anniversary_list" || "otherdays_list":
             switch ($_SESSION['menu-Opt']) { //Execute menu back sessions
@@ -174,11 +183,21 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
             break;
     }
     //var_dump($receiver->getMessage());
-    if ($receiver->getMessage() == "000") {
+    if ($receiver->getMessage() == "000") 
+    {
         $responseExitMsg = "Exit Program!";
         $response = loadUssdSender($sessionId, $responseExitMsg,$address);
         session_destroy();
-    } else {
+    } 
+    else if(strlen($receiver->getMessage()) == 8)
+    {
+        $reminderDate = takeReminderDate($receiver->getMessage());
+        insertRequest();
+        logFile("Data is saved successfully.");
+        $response = loadUssdSender($sessionId, 'Your Reminder is saved successfully', $address);
+    }
+    else 
+    {
         logFile("Selected response message := " . $responseMsg[$menuName]);
         $response = loadUssdSender($sessionId, $responseMsg[$menuName], $address);
     }
@@ -224,6 +243,7 @@ function takeReminderDate($date){
         $day = $dayMonthArray[0];
         $month = $dayMonthArray[1];
     }
+    return "".$year."-".$month."-".$day;
 }
 
 function getBillingStartDate()
@@ -236,32 +256,47 @@ function getBillingEndDate()
     //$currentDate = date('Y-m-d');
     //return $currentDate;
 }
-function totalSubscribedMonth()
+function getTotalSubscribedMonth()
+{
+    $date1 = getBillingStartDate();
+    $date2 = getBillingEndDate();
+
+    $timestamp1 = strtotime($date1);
+    $timestamp2 = strtotime($date2);
+
+    $year1 = date('Y', $timestamp1);
+    $year2 = date('Y', $timestamp2);
+    $month1 = date('m', $timestamp1);
+    $month2 = date('m', $timestamp2);
+
+    $month_difference = (($year2 - $year1) * 12) + ($month2 - $month1);
+    return $month_difference;
+}
+
+function insertRequest()
 {
     
-}
-/*
-function processResponse($address)
-{
-   
-    return str_split($address,4)[1];
-}
-*/
-function insertRequest()
-{/*
-    $dsn = 'mysql:dbname=dbussdreminder; host=127.0.0.1';
-    $db_username = 'xossadmin';
-    $db_password = 'Asdf1234'; 
+    $dsn = 'mysql:host=localhost; dbname=db_ussdreminder';
+    $db_username = 'root';
+    $db_password = ''; 
+    $subscribed_month = getTotalSubscribedMonth();
+    global $sessionId;
+    global $address;
+    global $reminderDate;
+    
+    $billingStartDate = getBillingStartDate();
    
     try {
         $stmt = new PDO($dsn, $db_username, $db_password);
-        $sql = "INSERT INTO `tbl_request`(`request_id`, `msisdn`, `session_id`, `request_date`, `target_name`, `target_phoneNumber`, `billing_date_start`, `billing_date_end`, `subscribed_month_total`, `subscription`, `billing_grace`) 
-    VALUES (".$requestId.",".$address.",".$sessionId.",[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])";
-        $insertData = $stmt->query($sql);
+        $sql = "INSERT INTO `tbl_request` ( `msisdn`, `session_id`, `reminder_date`, `billing_date_start`, `subscribed_month_total`, `subscription`) VALUES ('".$address."', '".$sessionId."', '".$reminderDate."', CURRENT_TIMESTAMP, NULL, '1');";
+        $stmt = $stmt->prepare($sql);
+        $stmt->execute();
     } catch (PDOException $e) {
         echo "Connection Failed". $e->getMessage();
     }
+    
+}
 
-*/ }
 
 ?>
+
