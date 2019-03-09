@@ -1,6 +1,43 @@
-[ content=1, address=tel:411141, requestId=1551774648930, applicationId=APP_000001, encoding=440, version=1.0, sessionId=421411, ussdOperation=mo-init ]
+[ content=this will be the message, address=tel:8801866742387, requestId=1551784065601, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=this will be the message, address=tel:8801866742387, requestId=1551784138524, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=this will be the message, address=tel:8801866742387, requestId=1551784277094, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=this might not be the content, address=tel:8801866742387, requestId=1551784649028, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=this might not be the content, address=tel:8801866742387, requestId=1551785313759, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=*213*99#, address=tel:8801866742387, requestId=1551846582161, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
 Previous Menu is := 
-[ content=2, address=tel:411141, requestId=1551774723546, applicationId=APP_000001, encoding=440, version=1.0, sessionId=421411, ussdOperation=mo-cont ]
+[ content=1, address=tel:8801866742387, requestId=1551846614848, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose Birthday of
+	1. Friend
+	2. Wife
+	3. Family
+	4. Others
+	999. Back
+[ content=2, address=tel:8801866742387, requestId=1551846650780, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := birthday
+Selected response message := Enter your wife's birthday in ddmmyyyy format
+    999. Back
+[ content=14021998, address=tel:8801866742387, requestId=1551846675213, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := birthday_wife
+Data is saved successfully.
+[ content=Th, address=tel:8801866742387, requestId=1551849587331, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=3, address=tel:8801866742387, requestId=1551849597289, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the date for
+	1. First Date
+	2. Proposal Date
+    999.Back
+[ content=1, address=tel:8801866742387, requestId=1551849604440, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := otherdays
+Selected response message := Enter the date of first date in ddmmyyyy format
+    999. Back
+[ content=htgropng, address=tel:8801866742387, requestId=1551849618527, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := otherdays_firstdate
+Data is saved successfully.
+[ content=23, address=tel:8801866742387, requestId=1551850079066, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:8801866742387, requestId=1551850088817, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
 Previous Menu is := main
 Selected response message := Choose the day for
 	1. Friendship
@@ -8,10 +45,213 @@ Selected response message := Choose the day for
     3. Death
     4. Others
 	999.Back
-[ content=2, address=tel:411141, requestId=1551774730168, applicationId=APP_000001, encoding=440, version=1.0, sessionId=421411, ussdOperation=mo-cont ]
+[ content=2, address=tel:8801866742387, requestId=1551850125944, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
 Previous Menu is := anniversary
 Selected response message := Enter marriage anniversary in ddmmyyyy format
     999. Back
-[ content=14022001, address=tel:411141, requestId=1551774738029, applicationId=APP_000001, encoding=440, version=1.0, sessionId=421411, ussdOperation=mo-cont ]
+[ content=999, address=tel:8801866742387, requestId=1551850165353, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
 Previous Menu is := anniversary_marriage
+Selected response message := 
+[ content=999, address=tel:8801866742387, requestId=1551850180514, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=3, address=tel:8801866742387, requestId=1551850192091, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the date for
+	1. First Date
+	2. Proposal Date
+    999.Back
+[ content=*213*99#, address=tel:8801866742387, requestId=1552173119895, applicationId=APP_000001, encoding=440, version=1.0, sessionId=123, ussdOperation=mo-init ]
+Previous Menu is := otherdays
+[ content=*213*99#, address=tel:8801866742387, requestId=1552173130627, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:8801866742387, requestId=1552173140452, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the day for
+	1. Friendship
+    2. Marriage
+    3. Death
+    4. Others
+	999.Back
+[ content=2, address=tel:8801866742387, requestId=1552173147694, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-cont ]
+Previous Menu is := anniversary
+Selected response message := Enter marriage anniversary in ddmmyyyy format
+    999. Back
+[ content=03261991, address=tel:8801866742387, requestId=1552173168010, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-cont ]
+Previous Menu is := anniversary_marriage
+Data is saved successfully.
+[ content=124123, address=tel:8801866742387, requestId=1552173208740, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:8801866742387, requestId=1552173223572, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the day for
+	1. Friendship
+    2. Marriage
+    3. Death
+    4. Others
+	999.Back
+[ content=2, address=tel:8801866742387, requestId=1552173230222, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-cont ]
+Previous Menu is := anniversary
+Selected response message := Enter marriage anniversary in ddmmyyyy format
+    999. Back
+[ content=25111985, address=tel:8801866742387, requestId=1552173245055, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145214521341, ussdOperation=mo-cont ]
+Previous Menu is := anniversary_marriage
+Data is saved successfully.
+[ content=25111985, address=tel:8801866742387, requestId=1552173350854, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=3, address=tel:8801866742387, requestId=1552173363428, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the date for
+	1. First Date
+	2. Proposal Date
+    999.Back
+[ content=1, address=tel:8801866742387, requestId=1552173371218, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := otherdays
+Selected response message := Enter the date of first date in ddmmyyyy format
+    999. Back
+[ content=11221871, address=tel:8801866742387, requestId=1552173385184, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := otherdays_firstdate
+Data is saved successfully.
+[ content=11221871, address=tel:1866742112, requestId=1552173433203, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:1866742112, requestId=1552173446222, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the day for
+	1. Friendship
+    2. Marriage
+    3. Death
+    4. Others
+	999.Back
+[ content=2, address=tel:1866742112, requestId=1552173448939, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := anniversary
+Selected response message := Enter marriage anniversary in ddmmyyyy format
+    999. Back
+[ content=22119821, address=tel:1866742112, requestId=1552173460194, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := anniversary_marriage
+Data is saved successfully.
+[ content=22119821, address=tel:1866711871, requestId=1552173552286, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=1, address=tel:1866711871, requestId=1552173563169, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose Birthday of
+	1. Friend
+	2. Wife
+	3. Family
+	4. Others
+	999. Back
+[ content=3, address=tel:1866711871, requestId=1552173571489, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := birthday
+Selected response message := Enter your family's birthday in ddmmyyyy format
+    999. Back
+[ content=31111761, address=tel:1866711871, requestId=1552173583521, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-cont ]
+Previous Menu is := birthday_family
+Data is saved successfully.
+[ content=31111761, address=tel:1866711871, requestId=1552173635592, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352145, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:1866711871, requestId=1552173651377, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352150, ussdOperation=mo-cont ]
+Previous Menu is := 
+Selected response message := 
+[ content=223, address=tel:1866711871, requestId=1552173672505, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352150, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=223, address=tel:1866711862, requestId=1552173687285, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:1866711862, requestId=1552173700316, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the day for
+	1. Friendship
+    2. Marriage
+    3. Death
+    4. Others
+	999.Back
+[ content=2, address=tel:1866711862, requestId=1552173706582, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := anniversary
+Selected response message := Enter marriage anniversary in ddmmyyyy format
+    999. Back
+[ content=22121981, address=tel:1866711862, requestId=1552173716788, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := anniversary_marriage
+Data is saved successfully.
+[ content=22121981, address=tel:1866711862, requestId=1552173877672, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=1, address=tel:1866711862, requestId=1552173902499, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose Birthday of
+	1. Friend
+	2. Wife
+	3. Family
+	4. Others
+	999. Back
+[ content=1, address=tel:1866711862, requestId=1552173905817, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := birthday
+Selected response message := Enter your friend's birthday in ddmmyyyy format
+    999. Back
+[ content=12221778, address=tel:1866711862, requestId=1552173916511, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := birthday_friend
+Data is saved successfully.
+[ content=12221778, address=tel:1866711862, requestId=1552173994618, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352151, ussdOperation=mo-cont ]
+Previous Menu is := 
+Data is saved successfully.
+[ content=12221778, address=tel:1866711811, requestId=1552174040512, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352432, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=3, address=tel:1866711811, requestId=1552174082063, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352432, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the date for
+	1. First Date
+	2. Proposal Date
+    999.Back
+[ content=1, address=tel:1866711811, requestId=1552174090526, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352432, ussdOperation=mo-cont ]
+Previous Menu is := otherdays
+Selected response message := Enter the date of first date in ddmmyyyy format
+    999. Back
+[ content=12220181, address=tel:1866711811, requestId=1552174099286, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352432, ussdOperation=mo-cont ]
+Previous Menu is := otherdays_firstdate
+Data is saved successfully.
+[ content=12220181, address=tel:1866711811, requestId=1552174410951, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352555, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=3, address=tel:1866711811, requestId=1552174421941, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352555, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the date for
+	1. First Date
+	2. Proposal Date
+    999.Back
+[ content=1, address=tel:1866711811, requestId=1552174428406, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352555, ussdOperation=mo-cont ]
+Previous Menu is := otherdays
+Selected response message := Enter the date of first date in ddmmyyyy format
+    999. Back
+[ content=12111985, address=tel:1866711811, requestId=1552174440766, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352555, ussdOperation=mo-cont ]
+Previous Menu is := otherdays_firstdate
+Data is saved successfully.
+[ content=12111985, address=tel:1866711811, requestId=1552174627907, applicationId=APP_000001, encoding=440, version=1.0, sessionId=12352555, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=12111985, address=tel:1866711522, requestId=1552174654484, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442112, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:1866711522, requestId=1552174668921, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442112, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the day for
+	1. Friendship
+    2. Marriage
+    3. Death
+    4. Others
+	999.Back
+[ content=2, address=tel:1866711522, requestId=1552174674098, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442112, ussdOperation=mo-cont ]
+Previous Menu is := anniversary
+Selected response message := Enter marriage anniversary in ddmmyyyy format
+    999. Back
+[ content=22011991, address=tel:1866711522, requestId=1552174683957, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442112, ussdOperation=mo-cont ]
+Previous Menu is := anniversary_marriage
+Data is saved successfully.
+[ content=22011991, address=tel:1866411255, requestId=1552174782487, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442221, ussdOperation=mo-init ]
+Previous Menu is := 
+[ content=2, address=tel:1866411255, requestId=1552174793006, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442221, ussdOperation=mo-cont ]
+Previous Menu is := main
+Selected response message := Choose the day for
+	1. Friendship
+    2. Marriage
+    3. Death
+    4. Others
+	999.Back
+[ content=1, address=tel:1866411255, requestId=1552174798943, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442221, ussdOperation=mo-cont ]
+Previous Menu is := anniversary
+Selected response message := Enter friendship anniversary in ddmmyyyy format
+    999. Back
+[ content=03111998, address=tel:1866411255, requestId=1552174808074, applicationId=APP_000001, encoding=440, version=1.0, sessionId=1442221, ussdOperation=mo-cont ]
+Previous Menu is := anniversary_friendship
 Data is saved successfully.

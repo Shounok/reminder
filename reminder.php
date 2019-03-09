@@ -22,6 +22,7 @@ $encoding = $receiver->getEncoding(); // get the encoding value
 $version = $receiver->getVersion(); // get the version
 $sessionId = $receiver->getSessionId(); // get the session ID;
 
+$serviceID;
 
 
 $ussdOperation = $receiver->getUssdOperation(); // get the ussd operation
@@ -96,22 +97,27 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     $menuName = "main";
                     break;
             }
-            $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
+            $_SESSION['menu-Opt'] = $menuName; //Assign session menu name 
+            $_SESSION['service_id'] = $serviceID;
             break;
         case "birthday":
             $_SESSION['menu-Opt'] = "birthday_list"; //Set to  menu 'birthday' back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "birthday_friend";
+                    $serviceID = 1;
                     break;
                 case "2":
                     $menuName = "birthday_wife";
+                    $serviceID = 2;
                     break;
                 case "3":
                     $menuName = "birthday_family";
+                    $serviceID = 3;
                     break;
                 case "4":
                     $menuName = "birthday_others";
+                    $serviceID = 4;
                     break;
                 case "999":
                     $menuName = "main";
@@ -122,21 +128,26 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     break;
             }
             $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
+            $_SESSION['service_id'] = $serviceID;
             break;
         case "anniversary":
             $_SESSION['menu-Opt'] = "anniversary_list"; //Set to menu 'anniversary' back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "anniversary_friendship";
+                    $serviceID = 5;
                     break;
                 case "2":
                     $menuName = "anniversary_marriage";
+                    $serviceID = 6;
                     break;
                 case "3":
                     $menuName = "anniversary_death";
+                    $serviceID = 7;
                     break;
                 case "4":
                     $menuName = "anniversary_others";
+                    $serviceID = 8;
                     break;
                 case "999":
                     $menuName = "main";
@@ -147,15 +158,18 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     break;
             }
             $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
+            $_SESSION['service_id'] = $serviceID;
             break;
         case "otherdays":
             $_SESSION['menu-Opt'] = "otherdays_list"; //Set to  menu 'otherdays' back
             switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "otherdays_firstdate";
+                    $serviceID = 9;
                     break;
                 case "2":
                     $menuName = "otherdays_proposaldate";
+                    $serviceID = 10;
                     break;
                 case "999":
                     $menuName = "main";
@@ -194,7 +208,8 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
         $reminderDate = takeReminderDate($receiver->getMessage());
         insertRequest();
         logFile("Data is saved successfully.");
-        $response = loadUssdSender($sessionId, 'Your Reminder is saved successfully', $address);
+        //$response = loadUssdSender($sessionId, "Your Reminder is saved successfully and your service id is ".$_SESSION['service_id']."", $address);
+        $response = loadUssdSender($sessionId, "Your Reminder is saved successfully", $address);
     }
     else 
     {
@@ -283,12 +298,14 @@ function insertRequest()
     global $sessionId;
     global $address;
     global $reminderDate;
+    $serviceID = $_SESSION['service_id'];
     
     $billingStartDate = getBillingStartDate();
    
     try {
         $stmt = new PDO($dsn, $db_username, $db_password);
-        $sql = "INSERT INTO `tbl_request` ( `msisdn`, `session_id`, `reminder_date`, `billing_date_start`, `subscribed_month_total`, `subscription`) VALUES ('".$address."', '".$sessionId."', '".$reminderDate."', CURRENT_TIMESTAMP, NULL, '1');";
+        //$sql = "INSERT INTO `tbl_request` ( `msisdn`, `session_id`, `reminder_date`, `billing_date_start`, `subscribed_month_total`, `subscription`) VALUES ('".$address."', '".$sessionId."', '".$reminderDate."', CURRENT_TIMESTAMP, NULL, '1');";
+        $sql = "INSERT INTO `tbl_request` ( `msisdn`, `session_id`, `service_id`, `reminder_date`, `billing_date_start`, `subscribed_month_total`, `subscription`) VALUES ('".$address."', '".$sessionId."','".$serviceID."','".$reminderDate."', CURRENT_TIMESTAMP, NULL, '1');";
         $stmt = $stmt->prepare($sql);
         $stmt->execute();
     } catch (PDOException $e) {
