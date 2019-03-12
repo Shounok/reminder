@@ -21,7 +21,6 @@ $applicationId = $receiver->getApplicationId(); // get application ID
 $encoding = $receiver->getEncoding(); // get the encoding value
 $version = $receiver->getVersion(); // get the version
 $sessionId = $receiver->getSessionId(); // get the session ID;
-
 $serviceID;
 
 
@@ -30,10 +29,14 @@ logFile("[ content=$content, address=$address, requestId=$requestId, application
 
 // Algorithm
 $responseMsg = array(
+    "registration" => "Do you want to register as a new user?
+    1. Yes
+    2. No",
     "main" => "Select a Day
     1. Birth Day
     2. Anniversary
     3. Other Days
+    4. Unsubscribe
 	000.Exit",
     "birthday" => "Choose Birthday of
 	1. Friend
@@ -51,39 +54,68 @@ $responseMsg = array(
 	1. First Date
 	2. Proposal Date
     999.Back",
-    "birthday_friend" => "Enter your friend's birthday in ddmmyyyy format
-    999. Back",
-    "birthday_wife" =>  "Enter your wife's birthday in ddmmyyyy format
-    999. Back",
-    "birthday_family" =>  "Enter your family's birthday in ddmmyyyy format
-    999. Back",
-    "birthday_others" =>  "Enter other's birthday in ddmmyyyy format
-    999. Back",
-    "anniversary_friendship" => "Enter friendship anniversary in ddmmyyyy format
-    999. Back",
-    "anniversary_marriage" => "Enter marriage anniversary in ddmmyyyy format
-    999. Back",
-    "anniversary_death" => "Enter death anniversary in ddmmyyyy format
-    999. Back",
-    "anniversary_others" => "Enter other anniversary date in ddmmyyyy format
-    999. Back",
-    "otherdays_firstdate" => "Enter the date of first date in ddmmyyyy format
-    999. Back",
-    "otherdays_proposaldate" => "Enter your propsal date in ddmmyyyy format
-    999. Back"
+    "birthday_friend" => "Enter your friend's valid birthday in ddmmyyyy format
+    000. Exit",
+    "birthday_wife" =>  "Enter your wife's valid birthday in ddmmyyyy format
+    000. Exit",
+    "birthday_family" =>  "Enter your family's valid birthday in ddmmyyyy format
+    000. Exit",
+    "birthday_others" =>  "Enter other's valid birthday in ddmmyyyy format
+    000. Exit",
+    "anniversary_friendship" => "Enter valid friendship anniversary in ddmmyyyy format
+    000. Exit",
+    "anniversary_marriage" => "Enter valid marriage anniversary in ddmmyyyy format
+    000. Exit",
+    "anniversary_death" => "Enter valid death anniversary in ddmmyyyy format
+    000. Exit",
+    "anniversary_others" => "Enter other anniversary date in valid ddmmyyyy format
+    000. Exit",
+    "otherdays_firstdate" => "Enter the date of first date in valid ddmmyyyy format
+    000. Exit",
+    "otherdays_proposaldate" => "Enter your propsal date in valid ddmmyyyy format
+    000. Exit",
+    "cancellation" => "Thank you for using our service",
+    "unsubscribe" => "Do you really want to unsubscribe from the service?
+    1. Yes
+    2. No",
+    "confirm_unsubscribe" => "You unsubscribed from this service successfully."
    );
-logFile("Previous Menu is := " . $_SESSION["menu-Opt"]); //Get previous menu number
-if (($receiver->getUssdOperation()) == "mo-init") { //Send the main menu
-    loadUssdSender($sessionId, $responseMsg["main"],$address);
-    if (!(isset($_SESSION['menu-Opt']))) {
-        $_SESSION['menu-Opt'] = "main"; //Initialize main menu
+logFile("Previous Menu is := " . $_SESSION["menu-Opt"]);            //Get previous menu number
+
+    //Send the Main or Registration menu
+
+if (($receiver->getUssdOperation()) == "mo-init") {
+    // Check if msisdn is registered
+    if(checkAddress($address))                          
+    {                                  
+        //loadUssdSender($sessionId, $responseMsg["registration"],$address);
+        if (!(isset($_SESSION['menu-Opt']))) {
+            $_SESSION['menu-Opt'] = "main"; //Initialize main menu
+        }
+        loadUssdSender($sessionId, $responseMsg["main"],$address);
+    } else {
+        //loadUssdSender($sessionId, $responseMsg["main"],$address);
+        $_SESSION['menu-Opt'] = "registration"; //Initialize main menu
+        loadUssdSender($sessionId, $responseMsg["registration"],$address);
     }
+
 }
 if (($receiver->getUssdOperation()) == "mo-cont") {
     $menuName = null;
     switch($_SESSION['menu-Opt']) {
+        case 'registration':
+            switch ($receiver->getMessage()) {
+                case '1':
+                    $menuName = "main";
+                    break;
+                case '2':
+                    $menuName = "cancellation";
+                    break;
+            }
+            $_SESSION['menu-Opt'] = $menuName;
+            break;
         case "main":
-            switch ($content) {
+            switch ($receiver->getMessage()) {
                 case "1":
                     $menuName = "birthday";
                     break;
@@ -92,6 +124,9 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     break;
                 case "3":
                     $menuName = "otherdays";
+                    break;
+                case '4':
+                    $menuName = "unsubscribe";
                     break;
                 default:
                     $menuName = "main";
@@ -180,6 +215,20 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
                     break;
             }
             $_SESSION['menu-Opt'] = $menuName; //Assign session menu name
+            $_SESSION['service_id'] = $serviceID;
+            break;
+        case 'unsubscribe':
+            switch ($receiver->getMessage()) {
+                case '1':
+                    deleteSubscriber($receiver->getAddress());
+                    $menuName = "confirm_unsubscribe";
+                    break;
+                case '2':
+                    $menuName = "main";
+                    break;
+
+            }
+            $_SESSION['menu-Opt'] = $menuName;
             break;
         case "birthday_list" || "anniversary_list" || "otherdays_list":
             switch ($_SESSION['menu-Opt']) { //Execute menu back sessions
@@ -303,15 +352,56 @@ function insertRequest()
     $billingStartDate = getBillingStartDate();
    
     try {
+        //Insert each request into the table
         $stmt = new PDO($dsn, $db_username, $db_password);
-        //$sql = "INSERT INTO `tbl_request` ( `msisdn`, `session_id`, `reminder_date`, `billing_date_start`, `subscribed_month_total`, `subscription`) VALUES ('".$address."', '".$sessionId."', '".$reminderDate."', CURRENT_TIMESTAMP, NULL, '1');";
         $sql = "INSERT INTO `tbl_request` ( `msisdn`, `session_id`, `service_id`, `reminder_date`, `billing_date_start`, `subscribed_month_total`, `subscription`) VALUES ('".$address."', '".$sessionId."','".$serviceID."','".$reminderDate."', CURRENT_TIMESTAMP, NULL, '1');";
-        $stmt = $stmt->prepare($sql);
-        $stmt->execute();
+        $query = $stmt->prepare($sql);
+        $query->execute();
+        
+        //Check if the subscriber already exists, otherwise insert into the table
+        $sql2 = "INSERT INTO `tbl_subscribers` (`subscriber_address`, `service_id`)
+        SELECT '".$address."', '".$serviceID."' FROM `tbl_subscribers`        
+        WHERE NOT EXISTS (
+            SELECT `subscriber_address` FROM `tbl_subscribers` WHERE `subscriber_address` = '".$address."'
+        ) LIMIT 1";
+        $query = $stmt->prepare($sql2);
+        $query->execute();
     } catch (PDOException $e) {
         echo "Connection Failed". $e->getMessage();
     }
     
+}
+
+function checkAddress($address)
+{
+    $dsn = 'mysql:host=localhost; dbname=db_ussdreminder';
+    $db_username = 'root';
+    $db_password = ''; 
+
+    try {
+        $stmt = new PDO($dsn, $db_username, $db_password);
+        $sql = "SELECT `subscriber_address` FROM `tbl_subscribers` WHERE `subscriber_address`= '".$address."'";
+        $query = $stmt->prepare($sql);
+        $query->execute();
+        $address_exists = ($query->rowCount() > 0) ? TRUE : FALSE;
+    } catch (PDOException $e) {
+        echo "Connection Failed". $e->getMessage();
+    }
+    return $address_exists;
+}
+function deleteSubscriber($address)
+{
+    $dsn = 'mysql:host=localhost; dbname=db_ussdreminder';
+    $db_username = 'root';
+    $db_password = ''; 
+    try {
+        $stmt = new PDO($dsn, $db_username, $db_password);
+        $sql = "DELETE FROM `tbl_subscribers` WHERE `subscriber_address` = '".$address."'";
+        $query = $stmt->prepare($sql);
+        $query->execute();
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
 }
 
 

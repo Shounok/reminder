@@ -19,7 +19,7 @@ try {
     
     // Create the logic Here to fetch data from database 
     // and send the SMS based on taken service 
-    
+   
     $db = new PDO('mysql:host=localhost;dbname=db_ussdreminder', 'root', '');
     $query = "SELECT `msisdn`,`request_id`, `reminder_date`, `service_id` FROM `tbl_request`";
     $select = $db->prepare($query);
@@ -31,10 +31,12 @@ try {
     $request_id = $queryData['request_id'];
     $service_id = $queryData['service_id'];
     $reminderDate = $queryData['reminder_date'];
+    
 
     /*
     Insert a switch conditional statemont for each service_id
     */
+    
     if($service_id)
     {
         switch($service_id)
@@ -89,7 +91,7 @@ try {
  	$applicationId = "APP_012301";
  	$encoding = "0";
  	$version =  "1.0";
-    $password = "password";
+    $password = "1a370a445db79f3dc65e26dad2138bbd";
     $sourceAddress = "77000";
     $deliveryStatusRequest = "1";
     $charging_amount = "15.75";

@@ -75,3 +75,127 @@ Stack trace:
 [10-Mar-2019 00:37:48 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
 [10-Mar-2019 00:39:42 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
 [10-Mar-2019 00:39:53 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
+[10-Mar-2019 08:39:42 Europe/Berlin] PHP Notice:  Undefined index: sessionId in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 42
+[10-Mar-2019 08:39:42 Europe/Berlin] PHP Notice:  Undefined index: ussdOperation in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 43
+[10-Mar-2019 08:39:42 Europe/Berlin] PHP Notice:  Undefined index: vlrAddress in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 44
+[10-Mar-2019 08:39:42 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[10-Mar-2019 08:39:50 Europe/Berlin] PHP Notice:  Undefined index: sessionId in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 42
+[10-Mar-2019 08:39:50 Europe/Berlin] PHP Notice:  Undefined index: ussdOperation in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 43
+[10-Mar-2019 08:39:50 Europe/Berlin] PHP Notice:  Undefined index: vlrAddress in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 44
+[10-Mar-2019 08:39:50 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[10-Mar-2019 08:39:57 Europe/Berlin] PHP Notice:  Undefined index: sessionId in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 42
+[10-Mar-2019 08:39:57 Europe/Berlin] PHP Notice:  Undefined index: ussdOperation in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 43
+[10-Mar-2019 08:39:57 Europe/Berlin] PHP Notice:  Undefined index: vlrAddress in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 44
+[10-Mar-2019 08:39:57 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[10-Mar-2019 08:42:11 Europe/Berlin] PHP Notice:  Undefined index: sessionId in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 42
+[10-Mar-2019 08:42:11 Europe/Berlin] PHP Notice:  Undefined index: ussdOperation in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 43
+[10-Mar-2019 08:42:11 Europe/Berlin] PHP Notice:  Undefined index: vlrAddress in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 44
+[10-Mar-2019 08:42:11 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[10-Mar-2019 08:45:55 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[10-Mar-2019 08:46:08 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
+[10-Mar-2019 08:48:03 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[10-Mar-2019 08:48:10 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
+[10-Mar-2019 08:50:09 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
+[12-Mar-2019 08:22:03 Europe/Berlin] PHP Notice:  Undefined index: sessionId in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 42
+[12-Mar-2019 08:22:03 Europe/Berlin] PHP Notice:  Undefined index: ussdOperation in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 43
+[12-Mar-2019 08:22:03 Europe/Berlin] PHP Notice:  Undefined index: vlrAddress in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 44
+[12-Mar-2019 08:22:03 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[12-Mar-2019 08:22:13 Europe/Berlin] PHP Notice:  Undefined index: sessionId in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 42
+[12-Mar-2019 08:22:13 Europe/Berlin] PHP Notice:  Undefined index: ussdOperation in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 43
+[12-Mar-2019 08:22:13 Europe/Berlin] PHP Notice:  Undefined index: vlrAddress in C:\xampp\htdocs\reminder\lib\ussd\MoUssdReceiver.php on line 44
+[12-Mar-2019 08:22:13 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 75
+[12-Mar-2019 08:33:19 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
+[12-Mar-2019 08:34:27 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 101
+[12-Mar-2019 09:07:58 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 111
+[12-Mar-2019 09:20:17 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 111
+[12-Mar-2019 09:23:28 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 232
+[12-Mar-2019 09:23:28 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 233
+[12-Mar-2019 09:23:43 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 232
+[12-Mar-2019 09:23:43 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 233
+[12-Mar-2019 09:31:14 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 10:28:20 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 10:28:20 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 10:28:31 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 10:28:31 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 10:28:57 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 10:33:13 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 10:33:13 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 10:34:19 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 10:34:19 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 10:35:08 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 10:40:45 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 10:40:45 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 10:41:13 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 10:48:31 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 10:50:29 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 10:50:29 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 11:13:11 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 128
+[12-Mar-2019 11:21:16 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 253
+[12-Mar-2019 11:21:16 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 254
+[12-Mar-2019 11:21:29 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 253
+[12-Mar-2019 11:21:29 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 254
+[12-Mar-2019 11:21:56 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 253
+[12-Mar-2019 11:21:56 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 254
+[12-Mar-2019 11:34:25 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 141
+[12-Mar-2019 11:36:48 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:36:56 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:36:56 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 102
+[12-Mar-2019 11:36:56 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 11:36:56 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 11:37:05 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:37:07 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:37:18 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:37:18 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 102
+[12-Mar-2019 11:37:18 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 11:37:18 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 11:37:31 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:37:36 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:37:36 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 102
+[12-Mar-2019 11:37:36 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 11:37:36 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 11:38:32 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:38:43 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 11:42:38 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:42:59 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 11:51:12 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:51:25 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 11:54:06 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:54:06 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 102
+[12-Mar-2019 11:54:06 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 245
+[12-Mar-2019 11:54:06 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 246
+[12-Mar-2019 11:54:16 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 11:54:29 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 12:21:06 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 12:21:22 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 12:26:06 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 12:35:21 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 130
+[12-Mar-2019 12:39:43 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 12:39:56 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 128
+[12-Mar-2019 12:42:35 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 78
+[12-Mar-2019 12:42:49 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 128
+[12-Mar-2019 12:51:59 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 261
+[12-Mar-2019 12:51:59 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 262
+[12-Mar-2019 12:52:18 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 12:52:30 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 12:54:58 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 261
+[12-Mar-2019 12:54:58 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 262
+[12-Mar-2019 12:55:26 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 261
+[12-Mar-2019 12:55:26 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 262
+[12-Mar-2019 12:56:13 Europe/Berlin] PHP Notice:  Undefined index: menu-Opt in C:\xampp\htdocs\reminder\reminder.php on line 82
+[12-Mar-2019 12:56:36 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:16:37 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:17:31 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:19:10 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:20:26 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:22:24 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:28:16 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:28:21 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 263
+[12-Mar-2019 13:28:21 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 264
+[12-Mar-2019 13:30:40 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:31:16 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:31:20 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 264
+[12-Mar-2019 13:31:20 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 265
+[12-Mar-2019 13:32:08 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 135
+[12-Mar-2019 13:32:17 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 264
+[12-Mar-2019 13:32:17 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\reminder\reminder.php on line 265
+[12-Mar-2019 13:34:38 Europe/Berlin] PHP Notice:  Undefined variable: serviceID in C:\xampp\htdocs\reminder\reminder.php on line 136
