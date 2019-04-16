@@ -2,9 +2,10 @@
 
 include_once 'lib/ussd/MoUssdReceiver.php';
 include_once 'lib/ussd/MtUssdSender.php';
+include_once 'lib/subscription/MoSubscribe.php';
 include_once 'log.php';
 ini_set('error_log', 'ussd-app-error.txt');
-@ob_start();
+//@ob_start();
 
 
 
@@ -12,8 +13,8 @@ ini_set('error_log', 'ussd-app-error.txt');
 $receiver = new MoUssdReceiver(); // Create the Receiver object
 $receiverSessionId = $receiver->getSessionId();
 $address = $receiver->getAddress(); // get the sender's address
-session_id($receiverSessionId); //Use received session id to create a unique session
-session_start();
+//session_id($receiverSessionId); //Use received session id to create a unique session
+//session_start();
 $content = $receiver->getMessage(); // get the message content
 
 $requestId = $receiver->getRequestID(); // get the request ID
@@ -23,9 +24,37 @@ $version = $receiver->getVersion(); // get the version
 $sessionId = $receiver->getSessionId(); // get the session ID;
 $serviceID;
 
-
 $ussdOperation = $receiver->getUssdOperation(); // get the ussd operation
 logFile("[ content=$content, address=$address, requestId=$requestId, applicationId=$applicationId, encoding=$encoding, version=$version, sessionId=$sessionId, ussdOperation=$ussdOperation ]");
+
+/*
+$appPassword = 'c2f4a01c51b8f74c811f0ea9d7bb50a9';
+if($appPassword != '')
+{
+    $subscription = new MoSubscribe("http://developer.bdapps.com/subscription/getstatus");
+    $checkSubscription = $subscription->checkSubscriptionStatus($applicationId,$password,$address);
+    
+    logFile('The Server is hit and Application subscription status can be cheked.');
+    
+    //The response should be recieved here.
+    $subscriptionStatus = $subscription->getSubscriptionStatus();
+    
+    if($subscriptionStatus == false)
+    {
+        //If Not Subscribed
+        $subscription = new MoSubscribe("http://developer.bdapps.com/subscription/send");
+        $registerUser = $subscription->subscription($applicationId, $appPassword, $version, 1, $address);
+        logFile("The server is Hit and the user isn't registered");
+    }
+    else
+    {
+        //If Subscribed
+    }
+} else
+{
+    logFile("The application isn't configured properly.");
+}
+*/
 
 // Algorithm
 $responseMsg = array(
@@ -85,6 +114,7 @@ logFile("Previous Menu is := " . $_SESSION["menu-Opt"]);            //Get previo
     //Send the Main or Registration menu
 
 if (($receiver->getUssdOperation()) == "mo-init") {
+    /*
     // Check if msisdn is registered
     if(checkAddress($address))                          
     {                                  
@@ -98,6 +128,13 @@ if (($receiver->getUssdOperation()) == "mo-init") {
         $_SESSION['menu-Opt'] = "registration"; //Initialize main menu
         loadUssdSender($sessionId, $responseMsg["registration"],$address);
     }
+    */
+    
+    if(!isset($_SESSION['menu-Opt'])){
+        $_SESSION['menu-Opt']   = "main";
+    }
+    $response = loadUssdSender($sessionId, $responseMsg["main"],$address);
+    logFile($response);
 
 }
 if (($receiver->getUssdOperation()) == "mo-cont") {
@@ -272,7 +309,7 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
 **/
 function loadUssdSender($sessionId, $responseMessage,$address)
 {
-    $password = "1234";
+    $password = "c2f4a01c51b8f74c811f0ea9d7bb50a9";
     $destinationAddress = $address;
     if ($responseMessage == "000") {
         $ussdOperation = "mt-fin";
@@ -280,12 +317,12 @@ function loadUssdSender($sessionId, $responseMessage,$address)
         $ussdOperation = "mt-cont";
     }
     $chargingAmount = "5.00";
-    $applicationId = "APP_012301";
+    $applicationId = "APP_012915";
     $encoding = "440";
     $version = "1.0";
     try {
         // Create the sender object server url
-        $sender = new MtUssdSender("http://localhost:7000/ussd/send"); // Application ussd-mt sending https url
+        $sender = new MtUssdSender("http://developer.bdapps.com/ussd/send"); // Application ussd-mt sending https url
         $response = $sender->ussd($applicationId, $password, $version, $responseMessage,
             $sessionId, $ussdOperation, $destinationAddress, $encoding, $chargingAmount);
         return $response;
@@ -339,10 +376,11 @@ function getTotalSubscribedMonth()
 
 function insertRequest()
 {
-    
-    $dsn = 'mysql:host=localhost; dbname=db_ussdreminder';
-    $db_username = 'root';
-    $db_password = ''; 
+    $host= '116.193.219.158';
+    $db= 'dbussdreminder';
+    $dsn = "mysql:host=$host; dbname=$db";
+    $db_username = 'xossadmin';
+    $db_password = 'Asdf1234'; 
     $subscribed_month = getTotalSubscribedMonth();
     global $sessionId;
     global $address;
@@ -374,9 +412,11 @@ function insertRequest()
 
 function checkAddress($address)
 {
-    $dsn = 'mysql:host=localhost; dbname=db_ussdreminder';
-    $db_username = 'root';
-    $db_password = ''; 
+    $host = '116.193.219.158';
+    $db = 'dbussdreminder';
+    $dsn = "mysql:host=$host; dbname=$db";
+    $db_username = 'xossadmin';
+    $db_password = 'Asdf1234'; 
 
     try {
         $stmt = new PDO($dsn, $db_username, $db_password);
