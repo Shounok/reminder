@@ -5,16 +5,17 @@ include_once 'lib/ussd/MtUssdSender.php';
 include_once 'lib/subscription/MoSubscribe.php';
 include_once 'log.php';
 ini_set('error_log', 'ussd-app-error.txt');
-//@ob_start();
+@ob_start();
 
 
 
 
 $receiver = new MoUssdReceiver(); // Create the Receiver object
 $receiverSessionId = $receiver->getSessionId();
+logFile("recieverSession: ".$receiverSessionId);
 $address = $receiver->getAddress(); // get the sender's address
 //session_id($receiverSessionId); //Use received session id to create a unique session
-//session_start();
+
 $content = $receiver->getMessage(); // get the message content
 
 $requestId = $receiver->getRequestID(); // get the request ID
@@ -23,6 +24,9 @@ $encoding = $receiver->getEncoding(); // get the encoding value
 $version = $receiver->getVersion(); // get the version
 $sessionId = $receiver->getSessionId(); // get the session ID;
 $serviceID;
+//session_start();
+$_SESSION['menu-Opt']=null;
+logFile($SessionId);
 
 $ussdOperation = $receiver->getUssdOperation(); // get the ussd operation
 logFile("[ content=$content, address=$address, requestId=$requestId, applicationId=$applicationId, encoding=$encoding, version=$version, sessionId=$sessionId, ussdOperation=$ussdOperation ]");
@@ -113,7 +117,8 @@ logFile("Previous Menu is := " . $_SESSION["menu-Opt"]);            //Get previo
 
     //Send the Main or Registration menu
 
-if (($receiver->getUssdOperation()) == "mo-init") {
+if (($receiver->getUssdOperation()) == "mo-init") 
+{
     /*
     // Check if msisdn is registered
     if(checkAddress($address))                          
@@ -129,17 +134,25 @@ if (($receiver->getUssdOperation()) == "mo-init") {
         loadUssdSender($sessionId, $responseMsg["registration"],$address);
     }
     */
+
     
     if(!isset($_SESSION['menu-Opt'])){
         $_SESSION['menu-Opt']   = "main";
+	logFile("The Program reaches here.");
     }
-    $response = loadUssdSender($sessionId, $responseMsg["main"],$address);
-    logFile($response);
-
-}
-if (($receiver->getUssdOperation()) == "mo-cont") {
+	else {
+	logFile("It sets a menu-Opt.");
+	}
+    //logFile("The Program reaches here too.");
+    //$response = loadUssdSender($sessionId, $responseMsg["main"],$address);
+    //logFile($response);
+	//logFile("[SessionID=$sessionId, Response=$responseMsg['main'], Address= $address]");
+    
+if (($receiver->getUssdOperation()) == "mo-cont") 
+{
     $menuName = null;
-    switch($_SESSION['menu-Opt']) {
+    switch($_SESSION['menu-Opt']) 
+    {
         case 'registration':
             switch ($receiver->getMessage()) {
                 case '1':
@@ -296,13 +309,18 @@ if (($receiver->getUssdOperation()) == "mo-cont") {
         logFile("Data is saved successfully.");
         //$response = loadUssdSender($sessionId, "Your Reminder is saved successfully and your service id is ".$_SESSION['service_id']."", $address);
         $response = loadUssdSender($sessionId, "Your Reminder is saved successfully", $address);
+        session_destroy();
     }
     else 
     {
         logFile("Selected response message := " . $responseMsg[$menuName]);
         $response = loadUssdSender($sessionId, $responseMsg[$menuName], $address);
+        logFile($response);
+        session_destroy();
     }
 }
+
+
 /*
     Get the session id and Response message as parameter
     Create sender object and send ussd with appropriate parameters
@@ -316,16 +334,16 @@ function loadUssdSender($sessionId, $responseMessage,$address)
     } else {
         $ussdOperation = "mt-cont";
     }
-    $chargingAmount = "5.00";
+    //$chargingAmount = "0";
     $applicationId = "APP_012915";
-    $encoding = "440";
-    $version = "1.0";
     try {
         // Create the sender object server url
-        $sender = new MtUssdSender("http://developer.bdapps.com/ussd/send"); // Application ussd-mt sending https url
+        $sender = new MtUssdSender("https://developer.bdapps.com/ussd/send"); // Application ussd-mt sending https url
         $response = $sender->ussd($applicationId, $password, $version, $responseMessage,
             $sessionId, $ussdOperation, $destinationAddress, $encoding, $chargingAmount);
+        logFile($response);
         return $response;
+	
     } catch (UssdException $ex) {
         //throws when failed sending or receiving the ussd
         error_log("USSD ERROR: {$ex->getStatusCode()} | {$ex->getStatusMessage()}");
